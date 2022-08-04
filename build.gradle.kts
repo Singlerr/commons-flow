@@ -61,40 +61,6 @@ githubRelease {
     generateReleaseNotes.set(true)
     releaseAssets.setFrom(tasks.jar.get().destinationDirectory.asFile.get().listFiles())
 }
-afterEvaluate {
-    publishing {
-        publications.create<MavenPublication>("maven"){
-            groupId = project.group.toString()
-            artifactId = rootProject.name
-            version = project.version.toString()
-        }
-        publications.withType<MavenPublication> {
-            artifact(tasks.getByName("javadocJar"))
-            pom {
-                name.set("commons-flow")
-                description.set("A java library for handle exceptions with flow")
-                url.set("https://github.com/Singlerr/commons-flow")
-                licenses {
-                    license {
-                        name.set("MIT")
-                        url.set("https://opensource.org/licenses/MIT")
-                    }
-                }
-                developers {
-                    developer {
-                        id.set("singlerr")
-                        name.set("Singlerr")
-                        email.set("singlerr@naver.com")
-                    }
-                }
-                scm {
-                    url.set("https://github.com/Singlerr/commons-flow")
-                }
-
-            }
-        }
-    }
-}
 publishing {
     repositories {
         maven {
