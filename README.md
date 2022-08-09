@@ -1,5 +1,5 @@
 # commons-flow
-[![](https://jitpack.io/v/Singlerr/commons-flow.svg)](https://jitpack.io/#Singlerr/commons-flow)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.singlerr/commons-flow/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.singlerr/commons-flow)
 A java library for handle exceptions with flow
 
 
